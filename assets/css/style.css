@@ -1,0 +1,352 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700&display=swap');
+
+
+:root{
+    --black:#000000;
+    --blue:#0d4edb;
+    --light:#f5f5f591;
+    --red:#d33636;
+    --light-blue:#f0f2f5;
+    --light-gray:#e4e6eb;
+    --background:#F0F2F5;
+    --white:#ffffff;
+    --blue-gyry:#CFD1D5;
+    --search-placeholder:#a7a9aa;
+}
+*{
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+    padding:0;
+    text-decoration: none;
+    box-sizing: border-box;
+    outline: none;
+
+  
+
+}
+
+
+body{
+    background-color: var(--background);
+    
+}
+li{
+    list-style: none;
+}
+
+.header{
+    background-color:var(--white);
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 16px;
+    box-shadow: 0px 1px 3px var(--light-gray);
+}
+.navbar1{
+    display: flex;
+}
+
+.navbar1 .logo img{
+    width: 40px;
+}
+
+
+.navbar1 .searchbar{
+    background:var(--light-blue);
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    width: 240px;
+    margin-left: 10px;
+    height: 40px;
+}
+.searchbar .search-form input{
+    border: none;
+    background: none;
+    margin-left: 10px;
+}
+
+.searchbar .search-icon{
+    margin-left: 13px;
+}
+
+.searchbar .search-icon i{
+    font-weight: 600;
+    color: #7f8183;
+}
+
+
+
+
+
+
+.header .searchbar input::placeholder{
+    color:var(--search-placeholder);
+    font-size: 16px;
+}
+
+
+.header .navbar{
+    display: flex;
+    margin-right: auto;
+    margin-left: 50px;    
+}
+
+.header .navbar i{
+    position: relative;
+    color:#949599;
+    font-size: 23px;
+    display: block;
+    border: 1px solid transparent;
+    background: blue;
+    display: block;
+    background: none;
+    padding: 10px 46px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+.header .navbar i:after{
+    content: "";
+    position:absolute;
+
+    background-color:blue;
+    height: 3px;
+    left: 0;
+    bottom: -8px;
+    width: 0; 
+}
+
+.header .navbar i:active:after{
+    width: 100%;
+}
+ .navbar .Home , .Watch , .Marketplace , .Gaming , .Groups , .More{
+    position: relative;
+}
+
+.navbar .More  , .category  .create {
+    display: none;
+}
+
+
+
+
+.header .navbar  span{
+    top: 53px;
+    left: 31px;
+    text-align: center;
+    width: 55px;
+    position: absolute;
+    background: black;
+    border-radius: 9px;
+    color: white;
+    height: 34px;
+    padding-top: 11px;
+    visibility: hidden;
+    font-size: 12px;
+}
+
+.header .navbar .Marketplace span{
+    width: 80px;
+    left: 19px;
+}
+
+.header .navbar .nav:hover span {
+    visibility: visible;
+ 
+}
+
+
+
+.header .navbar i:hover{
+    background:#f2f2f2;
+    border-radius: 10px;
+    
+}
+
+
+.header .navbar i:active{
+background: blue;
+}
+.header .category{
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    padding-left: 8px;
+}
+
+.header .category .subcategory{
+    background: #f2f2f2;
+    border-radius: 40px;
+    margin-left: 14px;
+
+}
+
+
+.header .category .subcategory i{  
+    padding: 11px;
+    font-size: 18px;
+}
+.header .category .id-img{
+    margin-left: 14px;
+}
+
+.header .category img{
+    width: 39px;
+    height: 39px;
+    border-radius: 50px;
+    margin-top: 1px;
+}
+
+
+.header .menu , .messenger, .notification, .id-img , .create{
+    position: relative; 
+}
+
+.header .category .subcategory  span { 
+    top: 49px;
+    right: -13px;
+    text-align: center;
+    width: 64px;
+    position: absolute;
+    background: black;
+    border-radius: 10px;
+    color: white;
+    height: 34px;
+    padding-top: 8px;
+    visibility: hidden;
+    font-size: 13px;
+}
+
+.header .category .id-img span{
+    top: 53px;
+    right: -13px;
+    text-align: center;
+    width: 64px;
+    position: absolute;
+    background: black;
+    border-radius: 10px;
+    color: white;
+    height: 34px;
+    padding-top: 8px;
+    visibility: hidden;
+    font-size: 13px;
+}
+.header .category .subcategory:hover span , .header .category .id-img:hover span{ 
+    visibility: visible;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media querry */
+@media(max-width:1260px){
+    .header .searchbar .search-form{
+        display: none;
+    }
+    .header .searchbar{
+        width: 40px;
+    }
+}
+
+@media(max-width:1099px){
+     .navbar .Gaming , .category .menu {
+        display: none;
+    }
+    .navbar .More, .category .create{
+        display: block;
+    }
+}
+
+@media(max-width:700px){
+    .header  .Home , .Watch ,.Marketplace ,.Groups ,.Gaming{
+        display: none;
+    }
+  
+}
+
+@media(max-width:996px){
+    .header .navbar i{
+        padding: 10px 40px;
+    }
+   
+
+}
+
+@media(max-width:932px){
+    .header .navbar i{
+        padding: 10px 35px;
+    }
+}
+@media(max-width:1000px){
+    .header .navbar i{
+        padding: 10px 30px;
+    }
+    .header .navbar  span{
+        left: 16px;
+    }
+    .header .navbar .Marketplace span{
+        left: 5px;
+    }
+}
+@media(max-width:830px){
+    .header .navbar i{
+        padding: 10px 25px;
+    }
+    .header .navbar  span{
+        left: 12px;
+    }
+    .header .navbar .Marketplace span{
+        left: 0px;
+    }
+}
+
+@media(max-width:781px){
+    .header .navbar i{
+        padding: 10px 20px;
+    }
+    .header .navbar  span{
+        left: 7px;
+    }
+    .header .navbar .Marketplace span{
+        left: -6px;
+    }
+}
+@media(max-width:735px){
+    .header .navbar i{
+        padding: 10px 15px;
+    }
+    .header .navbar  span{
+        left: 0px;
+    }
+    .header .navbar .Marketplace span{
+        left: -10px;
+    }
+}
