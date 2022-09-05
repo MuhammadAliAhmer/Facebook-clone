@@ -243,6 +243,130 @@ background: blue;
 
 
 
+/* main section start */
+.main-section{
+    display: flex;
+}
+
+/* side bar section start */
+
+.left-side-bar {
+    margin-left: 20px;
+    margin-top: 23px;
+    width: 20%;
+}
+.side-bar .id img{
+    width: 28px;
+    height: 28px;
+    border-radius: 50px;
+    margin-left: 8px;
+
+}
+
+.side-bar li{
+   padding: 10px 0;
+}
+
+.side-bar li:hover{
+    background: rgb(231, 230, 228);
+    border-radius: 10px;
+}
+.side-bar li a{
+    display: flex;
+}
+
+
+.side-bar .i img{
+    width: 28px;
+    height: 28px;
+    margin-left: 8px;
+}
+
+.side-bar li a div{
+        padding-left: 13px;
+        margin-top: 6px;
+        font-weight: 600;
+        color:  #373636;
+}
+
+
+
+
+ .scroller:hover {
+    height: 593px;
+    overflow-y: scroll;
+    scrollbar-color: #663399 #008000;
+    scrollbar-width:thin;
+  }
+
+
+
+  .side-bar i{
+        width: 40px;
+        width: 33px;
+        font-size: 21px;
+        background: rgb(209, 209, 211);
+        height: 33px;
+        padding-left: 10px;
+        padding-top: 6px;
+        border-radius: 18px;
+        margin-left: 5px;
+  }
+
+
+  .main-section .left-side-bar .more{
+    display: flex;
+    cursor: pointer;
+  }
+
+
+  .main-section .left-side-bar .see{
+    display: flex;
+    cursor: pointer;
+  }
+
+  .main-section .left-side-bar .see a i , .main-section .left-side-bar .see-more i{
+    width: 40px;
+    width: 33px;
+    font-size: 21px;
+    background: rgb(209, 209, 211);
+    height: 33px;
+    padding-left: 8px;
+    padding-top: 6px;
+    border-radius: 19px;
+    margin-left: 4px; 
+    
+ }
+
+
+ .main-section .left-side-bar .see  h4, .main-section .left-side-bar .more h4{
+    padding-left: 13px;
+    padding-top: 6px;
+    color: gray;
+ }
+  .main-section .left-side-bar .see-less{
+    display: none;
+  }
+
+  .main-section .left-side-bar .see-less.active{
+    display: block;
+  }
+
+  .main-section .left-side-bar .overflow-btn{
+    display: none;
+  }
+  .main-section .left-side-bar .overflow-btn.active{
+    display: block;
+  }
+
+
+
+
+
+
+
+/* side bar section end */
+
 
 
 
@@ -282,6 +406,9 @@ background: blue;
     }
     .navbar .More, .category .create{
         display: block;
+    }
+    .main-section .left-side-bar{
+        display: none;
     }
 }
 
