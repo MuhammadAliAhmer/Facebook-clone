@@ -369,6 +369,168 @@ background: blue;
 
 
 
+/* mid section start */
+
+.mid-section{
+    padding-top: 23px;
+    width: 60%
+}
+
+.section-start{
+    width: 510px;
+    height: 296px;
+    margin-left: 107px;
+    background: white;
+    border-radius: 20px;
+}
+.stories-section{
+    display: flex;
+    border-bottom: 1px solid gray;
+
+}
+.stories-section .btn{
+    padding: 8px 20px;
+    cursor: pointer;
+}
+
+.stories-section .btn p{
+    height: 53px;
+    width: 130px;
+    padding: 15px 40px;
+}
+
+
+.stories-section .btn p:hover{
+    border-radius: 15px;
+    background:var(--light-gray);
+
+}
+
+
+.create-story{
+    width: 112px;
+    height: 200px;
+    border-radius: 4px;
+    background: white;
+
+}
+
+.create-story .story-img{
+    overflow: hidden;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    cursor: pointer;
+}
+
+.create-story .story-img img{
+    width: 112px;
+    height: 154px;
+    transition: transform 0.5s;
+    cursor: pointer;
+
+}
+.create-story .story-img:hover img{
+    transform: scale(1.1);
+    
+}
+
+.create-story .button{
+    position: relative;
+    border-bottom-right-radius: 15px;
+    border-bottom: 1px solid #b8b8bd;  
+      border-bottom-left-radius: 15px;
+      cursor: pointer;
+}
+
+.create-story .story-btn i{
+    border-radius: 50px;
+    background:blue;
+    width: 30px;
+    height: 30px;
+    padding: 8px;
+    outline: 3px solid white;
+    position: absolute;
+    left: 38px;
+    top: -22px;
+    color: white;
+}
+
+.story{
+    position: relative;
+    margin-left: 11px;
+}
+
+.story-section .p{
+    padding: 13px;
+}
+
+.story-section{
+    display: flex;
+    padding: 15px;
+} 
+
+ .story .story-thumb{
+   border-radius: 15px;
+    overflow: hidden;
+ }
+
+
+ 
+.story .story-thumb img{
+    height: 202px;
+   width:112px ; 
+    cursor: pointer;
+   transition: transform 0.5s;
+
+}
+
+.story .story-thumb img:hover{
+    transform: scale(1.1);
+}
+
+
+
+.story .story-profile img{
+    width: 28px;
+    height: 28px;
+    border-radius: 50px;
+    outline: 3px solid blue;
+    cursor: pointer;
+}
+
+.story .story-profile{
+    position: absolute;
+    top: 12px;
+    left: 15px;
+}
+
+.story .story-name{
+    position: absolute;
+    top: 180px;
+    left: 15px;
+}
+.story .story-name p{
+    color: white;
+    font-size: 17px;
+}
+
+
+
+/* mid section start */
+
+
+
+/* main section end  */
+
+
+
+
+
+
+
+
+
+
 
 
 
