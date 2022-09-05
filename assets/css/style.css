@@ -293,10 +293,10 @@ background: blue;
 
 
  .scroller:hover {
-    height: 593px;
     overflow-y: scroll;
     scrollbar-color: #663399 #008000;
     scrollbar-width:thin;
+    height: 100vh;
   }
 
 
@@ -369,7 +369,7 @@ background: blue;
 
 
 
-/* mid section start */
+/* story section start */
 
 .mid-section{
     padding-top: 23px;
@@ -420,6 +420,7 @@ background: blue;
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
     cursor: pointer;
+    object-fit: cover;
 }
 
 .create-story .story-img img{
@@ -427,6 +428,7 @@ background: blue;
     height: 154px;
     transition: transform 0.5s;
     cursor: pointer;
+    object-fit: cover;
 
 }
 .create-story .story-img:hover img{
@@ -481,7 +483,7 @@ background: blue;
    width:112px ; 
     cursor: pointer;
    transition: transform 0.5s;
-
+   object-fit: cover;
 }
 
 .story .story-thumb img:hover{
@@ -496,6 +498,7 @@ background: blue;
     border-radius: 50px;
     outline: 3px solid blue;
     cursor: pointer;
+    object-fit: cover;
 }
 
 .story .story-profile{
@@ -514,9 +517,184 @@ background: blue;
     font-size: 17px;
 }
 
+/* story section end  */
 
 
-/* mid section start */
+
+/* tweet section start */
+
+.tweet-section{
+    background: white;
+    width: 510px;
+    margin-left: 107px;
+    height: 135px;
+    border-radius: 15px;
+    display: flex;
+    margin-top:15px;
+}
+
+.tweet-section .profile{
+    display: flex;
+     margin-left: 17px;
+    border-bottom: 1px solid;
+    margin-top: 13px;
+    padding-bottom: 13px;
+}
+
+.tweet-section .profile .comment-form input{
+    padding: 12px;
+    width: 415px;
+    background:#f0f2f5;
+    border: none;
+    border-radius: 15px;
+    margin-left: 10px;
+}
+.tweet-section .profile .comment-form input::placeholder{
+    font-size: large;
+}
+
+.tweet-section .profile img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+}
+
+
+
+.tweet-section .activity-section{
+    display: flex;
+    margin-left: 33px;
+}
+
+.tweet-section .activity-section .live{
+    padding: 18px;
+}
+
+.tweet-section .activity-section .live i{
+    padding-right: 13px;
+    font-size: 21px;
+}
+.tweet-section .activity-section .live .fa-video  {
+    color: red;
+}
+
+.tweet-section .activity-section .live .fa-photo-film{
+    color: green;
+}
+
+.tweet-section .activity-section .live .fa-face-smile{
+    color: orange;
+}
+/* tweet section end  */
+
+
+/* post section start */
+.post-section{
+    width: 510px;
+    margin-left: 107px;
+    background: white;
+    margin-top: 16px;
+    border-radius: 15px;
+
+}
+
+
+
+.post-info{
+    display: flex;
+    padding: 18px;
+}
+
+
+.post-section .post-info .profile-img img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50px;
+}
+
+.post-section .post-info .user-info{
+    margin-top: -52px;
+    margin-left: 59px;
+}
+
+.post-section .post-info .name{
+    font-weight: 700;
+}
+.post-section .post-info .user-info .date{
+    margin-top: 1px;
+    font-weight: 400;
+}
+.post-section .post-info  .dots-more{
+    margin-left: 240px;
+}
+
+.post-section .post-info  .dots-more:hover{
+    padding: 3px 6px;
+    width: 27px;
+    height: 27px;
+    background: rgb(229, 226, 226);
+    border-radius: 50px;
+}
+.post-section .tag ul{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px 20px;
+}
+.post-section .tag p{
+    padding: 25px 22px;
+}
+
+
+
+.post-section .img-post img{
+    width: 510px;
+    height: 417px;
+    object-fit: cover;
+}
+
+
+.post-section .share-btn{
+        border-bottom: 1px solid;
+        margin: 17px;
+        padding-bottom: 15px;
+        color: #b8b8bd;
+}
+
+.post-section .share-btn .like-btn i{
+color:  #3b0fe3;
+}
+.post-section .share-btn .smile-btn i{
+color: #feaa10;
+}
+
+.post-section .comment-section{
+    display: flex;
+}
+
+.post-section .comment-section .comment{
+    padding: 9px 35px;
+    margin-bottom: 11px;
+    margin-left: 13px;
+    font-size: 20px;
+    border-radius: 10px;
+    color: rgb(95, 95, 94);
+}
+
+.post-section .comment-section .comment:hover{
+    background: #efefef;
+
+}
+.post-section .comment-section .comment i{
+    padding-right: 9px;
+    font-size: 21px;
+    color: rgb(95, 95, 94);
+}
+
+
+
+/* post section end  */
+
+
 
 
 
