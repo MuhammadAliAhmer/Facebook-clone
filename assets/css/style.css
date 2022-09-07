@@ -42,6 +42,9 @@ li{
     justify-content: space-between;
     padding: 5px 16px;
     box-shadow: 0px 1px 3px var(--light-gray);
+    position: fixed;
+    width: 100%;
+    z-index: 1;
 }
 .navbar1{
     display: flex;
@@ -186,6 +189,16 @@ background: blue;
     margin-left: 14px;
 
 }
+.header .category .subcategory p{
+    padding: 1px 6px;
+    position: absolute;
+    background: #ed1e45;
+    border-radius: 50px;
+    top: -5px;
+    font-size: 15px;
+    left: 29px;
+    color: white;
+}
 
 
 .header .category .subcategory i{  
@@ -210,7 +223,7 @@ background: blue;
 
 .header .category .subcategory  span { 
     top: 49px;
-    right: -13px;
+    right: -18px;
     text-align: center;
     width: 64px;
     position: absolute;
@@ -246,26 +259,25 @@ background: blue;
 /* main section start */
 .main-section{
     display: flex;
+    padding-top: 60px;
 }
 
 /* side bar section start */
 
 .left-side-bar {
     margin-left: 20px;
-    margin-top: 23px;
     width: 20%;
+    position: fixed;
+
 }
 .side-bar .id img{
     width: 28px;
     height: 28px;
     border-radius: 50px;
     margin-left: 8px;
-
 }
 
-.side-bar li{
-   padding: 10px 0;
-}
+
 
 .side-bar li:hover{
     background: rgb(231, 230, 228);
@@ -273,6 +285,7 @@ background: blue;
 }
 .side-bar li a{
     display: flex;
+    padding: 10px 0;
 }
 
 
@@ -292,13 +305,37 @@ background: blue;
 
 
 
- .scroller:hover {
+ .scroller{
     overflow-y: scroll;
     scrollbar-color: #663399 #008000;
     scrollbar-width:thin;
-    height: 100vh;
+    height: 86vh;
   }
-
+  #scroll::-webkit-scrollbar-track
+  {
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+      border-radius: 30px;
+      background-color: #F5F5F5;
+  }
+  
+  #scroll::-webkit-scrollbar
+  {
+      width: 6px;
+      background-color: #F5F5F5;
+      display: none;
+  }
+  .left-side-bar:hover#scroll::-webkit-scrollbar{
+    display: block;
+  }
+  .right-bar-section:hover#scroll::-webkit-scrollbar{
+    display: block;
+  }
+  #scroll::-webkit-scrollbar-thumb
+  {
+      border-radius: 30px;
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+      background-color: #8f8f8f;
+  }
 
 
   .side-bar i{
@@ -307,34 +344,31 @@ background: blue;
         font-size: 21px;
         background: rgb(209, 209, 211);
         height: 33px;
-        padding-left: 10px;
+        padding-left: 7px;
         padding-top: 6px;
         border-radius: 18px;
         margin-left: 5px;
   }
 
 
-  .main-section .left-side-bar .more{
+  .main-section .left-side-bar .more , .main-section .left-side-bar .see{
     display: flex;
     cursor: pointer;
+    padding: 10px 0;
   }
 
 
-  .main-section .left-side-bar .see{
-    display: flex;
-    cursor: pointer;
-  }
+
 
   .main-section .left-side-bar .see a i , .main-section .left-side-bar .see-more i{
-    width: 40px;
     width: 33px;
-    font-size: 21px;
+    font-size: 19px;
     background: rgb(209, 209, 211);
     height: 33px;
     padding-left: 8px;
-    padding-top: 6px;
+    padding-top: 7px;
     border-radius: 19px;
-    margin-left: 4px; 
+    margin-left: 4px;
     
  }
 
@@ -360,6 +394,74 @@ background: blue;
   }
 
 
+  .left-side-bar .your-shortcut{
+    border-top: 1px solid gray;
+    width: 260px;
+    margin-top: 16px;
+  }
+
+  .left-side-bar .your-shortcut .shortcut{
+    display: flex;
+    justify-content: space-between;
+  }
+  .left-side-bar .your-shortcut .shortcut h3{
+    padding-top: 19px;
+    padding-bottom: 10px;
+  }
+  .left-side-bar .your-shortcut .shortcut a{
+        color: rgb(70, 6, 247);
+        padding: 5px;
+        display: none;
+        margin-top: 20px;
+  }
+
+  .left-side-bar .shortcut  a:hover{
+    background-color: gainsboro;
+  }
+  .left-side-bar .your-shortcut:hover a{
+    display: block;
+
+
+  }
+
+  .left-side-bar .your-shortcut .offical{
+    padding: 8px 6px;
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+  }
+
+  .left-side-bar .your-shortcut .offical:hover{
+    background: rgb(230, 227, 227);
+  }
+
+
+
+  .left-side-bar .your-shortcut .offical img{
+    width: 30px ;
+    height: 30px;
+    border-radius: 50px;
+  }
+
+  .left-side-bar .your-shortcut .offical .p{
+    padding: 6px 13px;
+    color: black;
+  }
+
+  .left-side-bar .your-shortcut .meta{
+    font-size: 14px;
+    padding-top: 12px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .left-side-bar .your-shortcut .meta a{
+    color: gray;
+  }
+
+
+
+
 
 
 
@@ -373,13 +475,12 @@ background: blue;
 
 .mid-section{
     padding-top: 23px;
-    width: 60%
+    width: 541px;
+    margin: auto;
+    padding-right: 31px;
 }
 
 .section-start{
-    width: 510px;
-    height: 296px;
-    margin-left: 107px;
     background: white;
     border-radius: 20px;
 }
@@ -396,7 +497,7 @@ background: blue;
 .stories-section .btn p{
     height: 53px;
     width: 130px;
-    padding: 15px 40px;
+    padding: 17px 43px;
 }
 
 
@@ -525,9 +626,6 @@ background: blue;
 
 .tweet-section{
     background: white;
-    width: 510px;
-    margin-left: 107px;
-    height: 135px;
     border-radius: 15px;
     display: flex;
     margin-top:15px;
@@ -539,6 +637,7 @@ background: blue;
     border-bottom: 1px solid;
     margin-top: 13px;
     padding-bottom: 13px;
+    cursor: pointer;
 }
 
 .tweet-section .profile .comment-form input{
@@ -564,6 +663,7 @@ background: blue;
 .tweet-section .activity-section{
     display: flex;
     margin-left: 33px;
+    cursor: pointer;
 }
 
 .tweet-section .activity-section .live{
@@ -590,8 +690,6 @@ background: blue;
 
 /* post section start */
 .post-section{
-    width: 510px;
-    margin-left: 107px;
     background: white;
     margin-top: 16px;
     border-radius: 15px;
@@ -612,6 +710,10 @@ background: blue;
     border-radius: 50px;
 }
 
+.post-section .post-info .profile-img{
+    cursor: pointer;
+}
+
 .post-section .post-info .user-info{
     margin-top: -52px;
     margin-left: 59px;
@@ -625,59 +727,68 @@ background: blue;
     font-weight: 400;
 }
 .post-section .post-info  .dots-more{
+    padding: 3px 6px;
+    width: 27px;
+    height: 27px;
+    border-radius: 50px;
     margin-left: 240px;
 }
 
 .post-section .post-info  .dots-more:hover{
-    padding: 3px 6px;
-    width: 27px;
-    height: 27px;
     background: rgb(229, 226, 226);
-    border-radius: 50px;
+
 }
 .post-section .tag ul{
     display: flex;
     flex-wrap: wrap;
-    padding: 0px 20px;
 }
-.post-section .tag p{
-    padding: 25px 22px;
+.post-section .tag {
+    padding: 4px 22px;
 }
 
 
 
 .post-section .img-post img{
-    width: 510px;
-    height: 417px;
     object-fit: cover;
+    height: auto;
+    width: 100%;
 }
 
 
 .post-section .share-btn{
-        border-bottom: 1px solid;
-        margin: 17px;
-        padding-bottom: 15px;
-        color: #b8b8bd;
+    border-bottom: 1px solid;
+    color: #b8b8bd;
+    padding: 6px 8px;
 }
+
+.post-section .share-btn .like span{
+    cursor: pointer;
+}
+
 
 .post-section .share-btn .like-btn i{
 color:  #3b0fe3;
+cursor: pointer;
+
 }
 .post-section .share-btn .smile-btn i{
 color: #feaa10;
+cursor: pointer;
+
 }
 
 .post-section .comment-section{
     display: flex;
+    margin-top: 7px;
 }
 
 .post-section .comment-section .comment{
     padding: 9px 35px;
-    margin-bottom: 11px;
     margin-left: 13px;
     font-size: 20px;
-    border-radius: 10px;
+    border-radius: 5px;
     color: rgb(95, 95, 94);
+    margin-bottom: 7px;
 }
 
 .post-section .comment-section .comment:hover{
@@ -690,10 +801,175 @@ color: #feaa10;
     color: rgb(95, 95, 94);
 }
 
+.see-more-post ,.see-less-post{
+    cursor: pointer;
+}
+
+
+.overflow-btn-post , .see-less-post{
+    display: none;
+}
+
+.overflow-btn-post.active, .see-less-post.active{
+    display: block;
+}
+
 
 
 /* post section end  */
 
+
+
+/* right bar section start */
+
+ .right-bar-section{
+    width: 432px;
+    padding-left: 140px;
+    padding-top: 26px;
+    position: fixed;
+    right: 0px;
+ }
+
+
+ .right-bar-section .birthday{
+    padding: 7px 10px 29px;
+ }
+
+
+
+ .right-bar-section .birthday span{
+    font-size: 20px;
+    font-weight: initial;
+    color: gray;
+ }
+
+ .right-bar-section .birthday .notification{
+    padding-top: 17px;
+    display:flex;
+    border-bottom: 1px solid;
+ }
+
+ .right-bar-section .birthday .notification .gift-icon{
+    color: blue;
+ }
+ .right-bar-section .birthday .notification p{
+    padding-left: 20px;
+    margin-bottom: 28px;
+ }
+
+
+ .right-bar-section .content-info{
+    display: flex;
+ }
+ .right-bar-section .content-info .content{
+    color: black;
+    font-size: 22px;
+    font-weight: 600;
+ }
+
+ .right-bar-section .content-info .content-icons{
+    padding-left: 84px;
+    display: flex;
+    cursor: pointer;
+
+ }
+  .right-bar-section .content-info .content-icons .icons i{
+    width: 29px;
+    border-radius: 50px;
+    margin-left: 12px;
+    height: 29px;
+    padding: 6px;
+
+  }
+  .right-bar-section .content-info .content-icons .icons i:hover{
+    background: rgb(230, 227, 227);
+
+  }
+
+  .right-bar-section .content-info .content-icons .icons span{
+    display: none;
+    top: 31px;
+    left: 50px;
+    background:var(--black);
+    padding: 9px 18px;
+    border-radius: 8px;
+    font-size: 13px;
+    color: white;
+    
+  }
+
+  .right-bar-section .content-info .content-icons .icons:hover span   {
+    display: block;
+  }
+
+.right-bar-section .content-info .content-icons .video , .right-bar-section .content-info .content-icons .search , .right-bar-section .content-info .content-icons .option{
+    position: relative;
+  }
+
+  .right-bar-section .content-info .content-icons .video span{
+    position: absolute;
+    top: 28px;
+    left: -24px;
+  }
+  .right-bar-section .content-info .content-icons .search span{
+    position: absolute;
+    left: -142px;
+    top: 28px;
+    width: 181px;
+    padding: 9px 14px;
+    padding-right: 8px;
+  }
+  
+  .right-bar-section .content-info .content-icons .option span{
+    position: absolute;
+    left: -27px;
+    top: 28px;
+  }
+
+
+
+
+
+
+ .right-bar-section .online-content ul li a img{
+    width: 28px;
+    height: 28px;
+    border-radius: 50px;
+    margin-left: 8px;
+ }
+
+ 
+ .right-bar-section .online-content ul li:hover{
+    background: rgb(231, 230, 228);
+    border-radius: 10px;
+
+ }
+
+
+
+ .right-bar-section .online-content ul a{
+    display: flex;
+    padding: 10px 0;
+ }
+
+ .right-bar-section .online-content ul a div{
+    padding-left: 13px;
+    margin-top: 1px;
+    font-weight: 600;
+    color:  #373636;
+ }
+ 
+
+
+
+
+
+
+
+
+
+
+/* right bar section end */
 
 
 
@@ -750,12 +1026,18 @@ color: #feaa10;
     .main-section .left-side-bar{
         display: none;
     }
+    .mid-section{
+        margin-right: auto;
+        margin-left: 142px;
+    }
 }
 
 @media(max-width:700px){
     .header  .Home , .Watch ,.Marketplace ,.Groups ,.Gaming{
         display: none;
     }
+    
+
   
 }
 
@@ -766,6 +1048,36 @@ color: #feaa10;
    
 
 }
+
+@media(max-width:980px){
+   
+    .mid-section{
+        margin-left: 106px;
+    }
+
+}
+@media(max-width:957px){
+   
+    .mid-section{
+        margin-left: 77px;
+    }
+
+}
+
+@media(max-width:905px){
+   
+    .mid-section{
+        margin: auto;
+        padding-right: 0;
+    }
+    .right-bar-section{
+        display: none;
+    }
+
+}
+
+
+
 
 @media(max-width:932px){
     .header .navbar i{

@@ -12,3 +12,18 @@ $(document).ready(function(){
     })
 })
 
+
+$(document).ready(function(){
+    $('.see-more-post').click(function(){
+        $(this).hide();
+        $('.overflow-btn-post').addClass('active');
+        $('.see-less-post').addClass('active');
+    })
+
+       $('.see-less-post').click(function(){
+        $('.see-more-post').show();
+        $('.overflow-btn-post').removeClass('active');
+        $('.see-less-post').removeClass('active');
+    })
+})
+
