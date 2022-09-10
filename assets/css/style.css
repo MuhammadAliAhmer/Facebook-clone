@@ -587,7 +587,7 @@ background: blue;
  
 .story .story-thumb img{
     height: 100%;
-   width:112px ; 
+   width:100% ; 
     cursor: pointer;
    transition: transform 0.5s;
    object-fit: cover;
@@ -939,9 +939,10 @@ cursor: pointer;
 
  .right-bar-section .online-content ul li a img{
     width: 28px;
-    height: 28px;
     border-radius: 50px;
     margin-left: 8px;
+    position: relative;  height: 28px;
+  
  }
 
  
